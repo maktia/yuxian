@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看見・未見｜育賢國中 App 手機原型</title>
+<meta name="description" content="育賢國中 7 年級資優班採編課程「看見・未見」學生 App 的手機模擬原型，可以直接點著操作。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{--theme:#7FC4D6;--soft:#ECF6F9;--tint:#CCE7EF;--line:#ACD9E4;--deep:#395860;--ink:#1C2B2F;--shadow:#669DAB;--muted:#5E6E73}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{background:var(--soft);color:var(--ink);font-family:'Noto Sans TC','PingFang TC',sans-serif;line-height:1.6}
+.app{min-height:100%;display:flex;flex-direction:column}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:14px 20px;background:#fff;border-bottom:2px solid var(--line)}
+header h1{font-family:'Huninn','Noto Sans TC',sans-serif;font-weight:400;font-size:24px;letter-spacing:2px;margin:0}
+header .tag{display:inline-flex;align-items:center;height:30px;padding:0 12px;border-radius:15px;background:var(--tint);color:#10505F;font-size:13px;font-weight:700}
+header .sp{flex-grow:1}
+header a.ov{display:inline-flex;align-items:center;height:38px;padding:0 16px;border-radius:19px;border:2px solid var(--line);color:var(--deep);text-decoration:none;font-size:14px;font-weight:700}
+header a.ov:hover{border-color:var(--theme);color:var(--ink)}
+main{flex-grow:1;display:flex;gap:20px;padding:20px;align-items:flex-start}
+aside{width:250px;flex-shrink:0;background:#fff;border:2px solid var(--line);border-radius:20px;padding:12px}
+.grp{margin-bottom:10px}
+.gt{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;padding:6px 8px}
+button.s{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:transparent;border:0;border-radius:12px;padding:8px 10px;cursor:pointer;font-family:inherit;color:var(--ink);min-height:44px}
+button.s:hover{background:var(--soft)}
+button.s.on{background:var(--tint)}
+button.s .dot{width:8px;height:8px;border-radius:4px;flex-shrink:0}
+button.s .c{font-size:12px;font-weight:700;color:var(--muted);width:34px;flex-shrink:0}
+button.s .n{font-size:15px}
+.stage{flex-grow:1;display:flex;flex-direction:column;align-items:center;gap:14px}
+.phone{background:#1C2B2F;border-radius:52px;padding:16px;box-shadow:0 18px 44px rgba(28,43,47,.28);transform-origin:top center}
+.screen{width:412px;height:917px;background:#fff;border-radius:38px;overflow:hidden;position:relative}
+.screen iframe{width:412px;border:0;display:block}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px}
+.bar button{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 18px;border-radius:22px;border:2px solid var(--line);background:#fff;color:var(--deep);font-family:'Huninn','Noto Sans TC',sans-serif;font-size:16px;cursor:pointer}
+.bar button:hover{border-color:var(--theme);color:var(--ink)}
+.bar .now{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:22px;background:var(--theme);color:var(--ink);font-family:'Huninn','Noto Sans TC',sans-serif;font-size:17px;letter-spacing:1px}
+.hint{font-size:14px;color:var(--muted);text-align:center;max-width:520px}
+@media (max-width:860px){
+  main{flex-direction:column;align-items:center;padding:12px}
+  aside{width:100%;max-width:520px;order:2}
+  .stage{order:1;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<header>
+  <h1>看見・未見</h1>
+  <span class="tag">育賢國中　7 年級資優班　採編課程</span>
+  <span class="tag">手機原型</span>
+  <span class="sp"></span>
+  <a class="ov" href="overview.html">全部畫面與流程圖 ↗</a>
+</header>
+
+<main>
+  <aside id="nav"><div class="grp"><div class="gt">開始使用</div><button type="button" class="s" data-id="Connect"><span class="dot" style="background:#22A05A"></span><span class="c">S0a</span><span class="n">眼鏡連線</span></button><button type="button" class="s" data-id="CourseCode"><span class="dot" style="background:#22A05A"></span><span class="c">S0b</span><span class="n">輸入課程代碼</span></button><button type="button" class="s" data-id="Main"><span class="dot" style="background:#22A05A"></span><span class="c">S01</span><span class="n">首頁</span></button><button type="button" class="s" data-id="Tasks"><span class="dot" style="background:#22A05A"></span><span class="c">S04</span><span class="n">任務首頁</span></button></div><div class="grp"><div class="gt">第 2 堂　圖文卡</div><button type="button" class="s" data-id="Library"><span class="dot" style="background:#2E86A0"></span><span class="c">S05</span><span class="n">素材庫</span></button><button type="button" class="s" data-id="AIPrompt"><span class="dot" style="background:#2E86A0"></span><span class="c">S06</span><span class="n">AI 提示詞</span></button><button type="button" class="s" data-id="NoteEdit"><span class="dot" style="background:#2E86A0"></span><span class="c">S07</span><span class="n">觀察筆記</span></button><button type="button" class="s" data-id="Card"><span class="dot" style="background:#2E86A0"></span><span class="c">S08</span><span class="n">圖文卡</span></button></div><div class="grp"><div class="gt">第 3 堂　採訪與新聞</div><button type="button" class="s" data-id="Questions"><span class="dot" style="background:#C77A0A"></span><span class="c">S09</span><span class="n">採訪問題清單</span></button><button type="button" class="s" data-id="Interview"><span class="dot" style="background:#C77A0A"></span><span class="c">S09b</span><span class="n">一題一段錄音</span></button><button type="button" class="s" data-id="Transcript"><span class="dot" style="background:#C77A0A"></span><span class="c">S10</span><span class="n">逐字稿</span></button><button type="button" class="s" data-id="Draft"><span class="dot" style="background:#C77A0A"></span><span class="c">S11</span><span class="n">新聞草稿</span></button><button type="button" class="s" data-id="Scan"><span class="dot" style="background:#C77A0A"></span><span class="c">S12</span><span class="n">新聞毒物掃描</span></button><button type="button" class="s" data-id="Suggest"><span class="dot" style="background:#C77A0A"></span><span class="c">S13</span><span class="n">修改建議</span></button></div><div class="grp"><div class="gt">繳交</div><button type="button" class="s" data-id="InterviewSheet"><span class="dot" style="background:#669DAB"></span><span class="c">S15</span><span class="n">採訪彙整稿</span></button><button type="button" class="s" data-id="Pass"><span class="dot" style="background:#669DAB"></span><span class="c">S14</span><span class="n">掃描通過</span></button><button type="button" class="s" data-id="UploadOk"><span class="dot" style="background:#669DAB"></span><span class="c">S16</span><span class="n">上傳成功</span></button><button type="button" class="s" data-id="UploadFail"><span class="dot" style="background:#669DAB"></span><span class="c">S17</span><span class="n">上傳失敗</span></button></div></aside>
+
+  <div class="stage">
+    <div class="bar">
+      <button type="button" id="back">‹ 上一步</button>
+      <span class="now" id="now">S0a 眼鏡連線</span>
+      <button type="button" id="home">↻ 從頭開始</button>
+    </div>
+    <div class="phone" id="phone">
+      <div class="screen" id="screen"><iframe id="fr" src="Connect.html" title="App 畫面"></iframe></div>
+    </div>
+    <p class="hint">直接在手機裡點按鈕就會換頁，跟真的 App 一樣。左邊清單可以跳到任一畫面。</p>
+  </div>
+</main>
+
+</div>
+
+<script>
+var META = {"Connect": {"code": "S0a", "name": "眼鏡連線", "h": 917, "color": "#22A05A"}, "CourseCode": {"code": "S0b", "name": "輸入課程代碼", "h": 917, "color": "#22A05A"}, "Main": {"code": "S01", "name": "首頁", "h": 917, "color": "#22A05A"}, "Tasks": {"code": "S04", "name": "任務首頁", "h": 917, "color": "#22A05A"}, "Library": {"code": "S05", "name": "素材庫", "h": 917, "color": "#2E86A0"}, "AIPrompt": {"code": "S06", "name": "AI 提示詞", "h": 917, "color": "#2E86A0"}, "NoteEdit": {"code": "S07", "name": "觀察筆記", "h": 917, "color": "#2E86A0"}, "Card": {"code": "S08", "name": "圖文卡", "h": 1108, "color": "#2E86A0"}, "Questions": {"code": "S09", "name": "採訪問題清單", "h": 917, "color": "#C77A0A"}, "Interview": {"code": "S09b", "name": "一題一段錄音", "h": 917, "color": "#C77A0A"}, "Transcript": {"code": "S10", "name": "逐字稿", "h": 917, "color": "#C77A0A"}, "Draft": {"code": "S11", "name": "新聞草稿", "h": 917, "color": "#C77A0A"}, "Scan": {"code": "S12", "name": "新聞毒物掃描", "h": 917, "color": "#C77A0A"}, "Suggest": {"code": "S13", "name": "修改建議", "h": 917, "color": "#C77A0A"}, "InterviewSheet": {"code": "S15", "name": "採訪彙整稿", "h": 1108, "color": "#669DAB"}, "Pass": {"code": "S14", "name": "掃描通過", "h": 917, "color": "#669DAB"}, "UploadOk": {"code": "S16", "name": "上傳成功", "h": 917, "color": "#669DAB"}, "UploadFail": {"code": "S17", "name": "上傳失敗", "h": 917, "color": "#669DAB"}};
+var fr = document.getElementById('fr');
+var phone = document.getElementById('phone');
+var screenBox = document.getElementById('screen');
+var nowEl = document.getElementById('now');
+var stack = [];
+var current = 'Connect';
+
+function idFromHref(href){
+  try { var f = href.split('/').pop().split('?')[0].split('#')[0];
+        return f.replace('.html',''); } catch(e){ return null; }
+}
+function paint(id){
+  var m = META[id]; if(!m) return;
+  current = id;
+  nowEl.textContent = m.code + ' ' + m.name;
+  screenBox.style.height = m.h + 'px';
+  fr.style.height = m.h + 'px';
+  var btns = document.querySelectorAll('button.s');
+  for (var i=0;i<btns.length;i++){ btns[i].classList.toggle('on', btns[i].dataset.id === id); }
+  fit();
+}
+function go(id, push){
+  if (push !== false && current && current !== id) stack.push(current);
+  fr.src = id + '.html';
+  paint(id);
+}
+document.getElementById('nav').addEventListener('click', function(e){
+  var b = e.target.closest('button.s'); if(!b) return; go(b.dataset.id, true);
+});
+document.getElementById('back').addEventListener('click', function(){
+  if (!stack.length) return; var id = stack.pop(); go(id, false);
+});
+document.getElementById('home').addEventListener('click', function(){
+  stack = []; go('Connect', false);
+});
+fr.addEventListener('load', function(){
+  var id = null;
+  try { id = idFromHref(fr.contentWindow.location.href); } catch(e){ id = idFromHref(fr.src); }
+  if (id && META[id] && id !== current){ stack.push(current); paint(id); }
+  else if (id && META[id]) paint(id);
+});
+function fit(){
+  var m = META[current] || {h:917};
+  var avail = window.innerHeight - phone.getBoundingClientRect().top - 130;
+  var s = Math.min(1, avail / (m.h + 32));
+  var availW = (phone.parentNode.clientWidth - 8) / (412 + 32);
+  s = Math.min(s, availW);
+  if (!(s > 0.25)) s = 0.25;
+  phone.style.transform = 'scale(' + s + ')';
+  phone.style.marginBottom = ((m.h + 32) * (s - 1)) + 'px';
+}
+window.addEventListener('resize', fit);
+window.addEventListener('load', fit);
+paint('Connect');
+</script>
+</body>
+</html>

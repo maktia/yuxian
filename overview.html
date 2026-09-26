@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看見・未見｜育賢國中 App 全部畫面</title>
+<meta name="description" content="育賢國中「看見・未見」學生 App 的全部畫面、流程圖與規格。">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --theme:#7FC4D6; --soft:#ECF6F9; --tint:#CCE7EF; --line:#ACD9E4;
+  --deep:#395860; --ink:#1C2B2F; --shadow:#669DAB; --muted:#5E6E73;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--soft);color:var(--ink);font-family:'Noto Sans TC','PingFang TC',sans-serif;line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px 80px}
+header.top{background:linear-gradient(180deg,#7FC4D6 0%,#ACD9E4 100%);padding:56px 0 44px;margin-bottom:8px}
+header.top .wrap{padding-bottom:0}
+.kicker{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 16px;border-radius:18px;background:#fff;border:2px solid #fff;font-size:15px;font-weight:700;color:#10505F}
+h1{font-family:'Huninn','Noto Sans TC',sans-serif;font-weight:400;font-size:clamp(32px,6vw,52px);letter-spacing:3px;margin:16px 0 8px}
+header.top p.lead{margin:0;font-size:clamp(16px,2.4vw,20px);color:#10505F}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.cta a{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 26px;border-radius:28px;text-decoration:none;font-family:'Huninn','Noto Sans TC',sans-serif;font-size:20px;letter-spacing:1px}
+.cta a.primary{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--shadow)}
+.cta a.ghost{background:transparent;color:#10505F;border:3px solid #fff}
+nav.jump{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 8px}
+nav.jump a{display:inline-flex;align-items:center;height:42px;padding:0 16px;border-radius:21px;background:#fff;border:2px solid var(--line);color:var(--deep);text-decoration:none;font-size:15px;font-weight:700}
+nav.jump a:hover{border-color:var(--theme);color:var(--ink)}
+.sec{margin-top:48px;scroll-margin-top:16px}
+.sechead{border-left:10px solid var(--theme);padding:6px 0 6px 16px;border-radius:4px;margin-bottom:22px}
+.sec.g .sechead{border-color:#22A05A}
+.sec.b .sechead{border-color:#2E86A0}
+.sec.o .sechead{border-color:#C77A0A}
+.sec.s .sechead{border-color:var(--shadow)}
+h2{font-family:'Huninn','Noto Sans TC',sans-serif;font-weight:400;font-size:clamp(24px,4vw,34px);letter-spacing:2px;margin:0 0 4px}
+.sechead p{margin:0;font-size:16px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(206px,1fr));gap:24px;align-items:start}
+.card{display:block;text-decoration:none;color:inherit}
+.frame{width:206px;max-width:100%;border-radius:16px;border:2px solid var(--line);background:#fff;overflow:hidden;margin:0 auto}
+.card:hover .frame{border-color:var(--theme);box-shadow:0 6px 0 var(--tint)}
+.frame iframe{border:0;display:block;transform-origin:top left;pointer-events:none}
+.meta{margin-top:12px}
+.meta .code{display:inline-block;font-size:13px;font-weight:700;color:#10505F;background:var(--tint);border-radius:10px;padding:1px 8px;margin-right:6px}
+.meta b{font-size:18px}
+.meta p{margin:4px 0 0;font-size:14px;line-height:1.55;color:var(--muted)}
+.wideblock{background:#fff;border:2px solid var(--line);border-radius:24px;padding:20px;margin-top:24px}
+.widehead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:14px}
+.widehead h3{font-family:'Huninn','Noto Sans TC',sans-serif;font-weight:400;font-size:24px;letter-spacing:1px;margin:0}
+.widehead p{margin:0;font-size:15px;color:var(--muted);flex-grow:1}
+.widehead a.open{font-size:15px;font-weight:700;color:var(--deep);text-decoration:none;white-space:nowrap}
+.widehead a.open:hover{color:var(--ink)}
+.wide{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--soft)}
+.wide iframe{border:0;display:block;transform-origin:top left;position:absolute;left:0;top:0}
+footer{margin-top:64px;padding-top:24px;border-top:2px dashed var(--line);font-size:15px;color:var(--muted)}
+footer b{color:var(--ink)}
+@media (max-width:520px){header.top{padding:36px 0 28px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="kicker">育賢國中　7 年級資優班　採編課程「看見・未見」</span>
+    <h1>看見・未見</h1>
+    <p class="lead">育賢國中 AI 智慧眼鏡學生 App　全部畫面、流程圖與規格</p>
+    <div class="cta">
+      <a class="primary" href="index.html">打開手機原型 →</a>
+      <a class="ghost" href="#flow">看流程圖</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="jump">
+  <a href="#s1">開始使用</a>
+  <a href="#s2">第 2 堂</a>
+  <a href="#s3">第 3 堂</a>
+  <a href="#s4">繳交</a>
+  <a href="#flow">流程圖</a>
+  <a href="#spec">規格</a>
+</nav>
+
+  <section id="s1" class="sec g">
+    <div class="sechead"><h2>開始使用</h2><p>連眼鏡、輸入課程代碼、填身分，走到任務首頁就開始上課</p></div>
+    <div class="grid">
+      <a class="card" href="Connect.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Connect.html" loading="lazy" title="S0a 眼鏡連線" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S0a</span><b>眼鏡連線</b><p>三步驟教學；連不上可以先按「先略過」</p></div>
+      </a>
+      <a class="card" href="CourseCode.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="CourseCode.html" loading="lazy" title="S0b 輸入課程代碼" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S0b</span><b>輸入課程代碼</b><p>數字鍵盤輸入，也可以按 QR 改用掃描</p></div>
+      </a>
+      <a class="card" href="Main.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Main.html" loading="lazy" title="S01 首頁" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S01</span><b>首頁</b><p>班級、座號、姓名自己打，組別用點選</p></div>
+      </a>
+      <a class="card" href="Tasks.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Tasks.html" loading="lazy" title="S04 任務首頁" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S04</span><b>任務首頁</b><p>兩項任務的進度；每堂課從這裡出發也從這裡回來</p></div>
+      </a>
+    </div>
+  </section>
+  <section id="s2" class="sec b">
+    <div class="sechead"><h2>第 2 堂　POV 素材與觀察筆記</h2><p>拍校園 → AI 幫忙看照片 → 寫 50 字筆記 → 做成一張議題圖文卡</p></div>
+    <div class="grid">
+      <a class="card" href="Library.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Library.html" loading="lazy" title="S05 素材庫" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S05</span><b>素材庫</b><p>眼鏡照片自動進來，最多選 4 張，要填「這裡是哪裡」</p></div>
+      </a>
+      <a class="card" href="AIPrompt.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="AIPrompt.html" loading="lazy" title="S06 AI 提示詞" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S06</span><b>AI 提示詞</b><p>三顆預設提示詞，讓 AI 幫忙看照片裡的問題</p></div>
+      </a>
+      <a class="card" href="NoteEdit.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="NoteEdit.html" loading="lazy" title="S07 觀察筆記" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S07</span><b>觀察筆記</b><p>AI 草稿 50 字，學生一定要自己改過</p></div>
+      </a>
+      <a class="card" href="Card.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:554px">
+          <iframe src="Card.html" loading="lazy" title="S08 圖文卡" style="width:412px;height:1108px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S08</span><b>圖文卡</b><p>照片＋筆記合成一張，匯出後直接上傳</p></div>
+      </a>
+    </div>
+  </section>
+  <section id="s3" class="sec o">
+    <div class="sechead"><h2>第 3 堂　採訪與新聞毒物掃描</h2><p>先寫問題 → 一題一段錄音 → 逐字稿挑金句 → 寫新聞 → 掃掉偏頗字眼</p></div>
+    <div class="grid">
+      <a class="card" href="Questions.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Questions.html" loading="lazy" title="S09 採訪問題清單" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S09</span><b>採訪問題清單</b><p>先寫好 3～5 題，錄音才會一題一段</p></div>
+      </a>
+      <a class="card" href="Interview.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Interview.html" loading="lazy" title="S09b 一題一段錄音" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S09b</span><b>一題一段錄音</b><p>一次錄一題的回答，只錄受訪者，不用分辨兩個人的聲音</p></div>
+      </a>
+      <a class="card" href="Transcript.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Transcript.html" loading="lazy" title="S10 逐字稿" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S10</span><b>逐字稿</b><p>照題目分好段；劃線挑金句，或讓 AI 推薦</p></div>
+      </a>
+      <a class="card" href="Draft.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Draft.html" loading="lazy" title="S11 新聞草稿" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S11</span><b>新聞草稿</b><p>拖金句進來，寫標題和內文，自動存檔</p></div>
+      </a>
+      <a class="card" href="Scan.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Scan.html" loading="lazy" title="S12 新聞毒物掃描" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S12</span><b>新聞毒物掃描</b><p>紅字＝情緒或歧視，黃字＝沒證據的猜測</p></div>
+      </a>
+      <a class="card" href="Suggest.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Suggest.html" loading="lazy" title="S13 修改建議" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S13</span><b>修改建議</b><p>跳窗說明為什麼要改，並給中性寫法</p></div>
+      </a>
+    </div>
+  </section>
+  <section id="s4" class="sec s">
+    <div class="sechead"><h2>繳交</h2><p>整理採訪稿、確認要交的東西、上傳給老師</p></div>
+    <div class="grid">
+      <a class="card" href="InterviewSheet.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:554px">
+          <iframe src="InterviewSheet.html" loading="lazy" title="S15 採訪彙整稿" style="width:412px;height:1108px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S15</span><b>採訪彙整稿</b><p>問答式／報導式／重點摘要三種排版</p></div>
+      </a>
+      <a class="card" href="Pass.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="Pass.html" loading="lazy" title="S14 掃描通過" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S14</span><b>掃描通過</b><p>確認這次要交的東西，一鍵上傳</p></div>
+      </a>
+      <a class="card" href="UploadOk.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="UploadOk.html" loading="lazy" title="S16 上傳成功" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S16</span><b>上傳成功</b><p>列出交了什麼、存到哪、幾點傳的</p></div>
+      </a>
+      <a class="card" href="UploadFail.html" target="_blank" rel="noopener">
+        <div class="frame" style="height:458px">
+          <iframe src="UploadFail.html" loading="lazy" title="S17 上傳失敗" style="width:412px;height:917px;transform:scale(.5)"></iframe>
+        </div>
+        <div class="meta"><span class="code">S17</span><b>上傳失敗</b><p>東西還在平板裡；三步驟自救後可再試一次</p></div>
+      </a>
+    </div>
+  </section>
+
+
+  <section class="sec" id="flow">
+    <div class="sechead"><h2>流程圖與規格</h2><p>四張頁面流程圖（1920×1080，可以直接放投影片）、一張純方框操作流程圖，加上給工程師看的規格。</p></div>
+    <div id="spec"></div>
+    <section class="wideblock">
+      <div class="widehead"><h3>流程圖 ①　開始使用</h3><p>連線、綁課程、登入、任務首頁</p><a class="open" href="FlowMap1.html" target="_blank" rel="noopener">看原尺寸 1920×1080 ↗</a></div>
+      <div class="wide" data-w="1920" data-h="1080">
+        <iframe src="FlowMap1.html" loading="lazy" title="流程圖 ①　開始使用" style="width:1920px;height:1080px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>流程圖 ②　第 2 堂</h3><p>POV 素材與觀察筆記，產出議題圖文卡</p><a class="open" href="FlowMap2.html" target="_blank" rel="noopener">看原尺寸 1920×1080 ↗</a></div>
+      <div class="wide" data-w="1920" data-h="1080">
+        <iframe src="FlowMap2.html" loading="lazy" title="流程圖 ②　第 2 堂" style="width:1920px;height:1080px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>流程圖 ③　第 3 堂</h3><p>採訪與新聞毒物掃描，產出新聞初稿</p><a class="open" href="FlowMap3.html" target="_blank" rel="noopener">看原尺寸 1920×1080 ↗</a></div>
+      <div class="wide" data-w="1920" data-h="1080">
+        <iframe src="FlowMap3.html" loading="lazy" title="流程圖 ③　第 3 堂" style="width:1920px;height:1080px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>流程圖 ④　繳交</h3><p>整理採訪稿與上傳，含成功與失敗</p><a class="open" href="FlowMap4.html" target="_blank" rel="noopener">看原尺寸 1920×1080 ↗</a></div>
+      <div class="wide" data-w="1920" data-h="1080">
+        <iframe src="FlowMap4.html" loading="lazy" title="流程圖 ④　繳交" style="width:1920px;height:1080px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>操作流程圖</h3><p>只有方框、文字、箭頭，看操作順序用</p><a class="open" href="OpFlow.html" target="_blank" rel="noopener">看原尺寸 1120×1580 ↗</a></div>
+      <div class="wide" data-w="1120" data-h="1580">
+        <iframe src="OpFlow.html" loading="lazy" title="操作流程圖" style="width:1120px;height:1580px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>大題結構（給工程師）</h3><p>App 共 5 個大題，每筆資料都要帶的共同欄位</p><a class="open" href="Modules.html" target="_blank" rel="noopener">看原尺寸 880×1240 ↗</a></div>
+      <div class="wide" data-w="880" data-h="1240">
+        <iframe src="Modules.html" loading="lazy" title="大題結構（給工程師）" style="width:880px;height:1240px"></iframe>
+      </div>
+    </section>
+    <section class="wideblock">
+      <div class="widehead"><h3>圖文卡 A4 版型規格</h3><p>1／2／3／4 張照片的自動套版</p><a class="open" href="CardLayout.html" target="_blank" rel="noopener">看原尺寸 1584×760 ↗</a></div>
+      <div class="wide" data-w="1584" data-h="760">
+        <iframe src="CardLayout.html" loading="lazy" title="圖文卡 A4 版型規格" style="width:1584px;height:760px"></iframe>
+      </div>
+    </section>
+
+  </section>
+
+  <footer>
+    <p><b>這是介面設計稿，不是可以真的用的 App。</b>畫面裡的照片是佔位圖示，按鈕只做了主要路線的連結。</p>
+    <p>專案 yuxian　｜　設計：清大智慧教育　｜　配色 theme #7FC4D6　｜　字型 Huninn（標題、按鈕）＋ Noto Sans TC（內文）</p>
+  </footer>
+
+</div>
+
+<script>
+function fitWide(){
+  document.querySelectorAll('.wide').forEach(function(box){
+    var w = parseFloat(box.dataset.w), h = parseFloat(box.dataset.h);
+    var avail = box.clientWidth || box.parentNode.clientWidth;
+    var s = avail / w;
+    box.style.height = Math.round(h * s) + 'px';
+    var f = box.querySelector('iframe');
+    if (f) f.style.transform = 'scale(' + s + ')';
+  });
+}
+window.addEventListener('resize', fitWide);
+window.addEventListener('load', fitWide);
+fitWide();
+</script>
+</body>
+</html>
